@@ -6,7 +6,7 @@
   "display": "fullscreen",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/workshop04",
+  "start_url": "/starwars",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
