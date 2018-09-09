@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <img src="assets/addressbook.png" class="logo"> My Addressbook
+</mat-toolbar>
+
+<app-address-entry (newAddress)="processAddress($event)">
+</app-address-entry>
+
+<mat-tab-group (selectedTabChange)="loadAddress($event)">
+  <mat-tab *ngFor="let t of tabs; let i = index" [label]="t.label">
+
+    <!-- <mat-list>
+      <mat-list-item *ngFor="let a of addrSelected; let i = index">
+        <mat-divider></mat-divider>
+        {{a.name}}, {{a.address}}, {{a.phone}}, {{a.email}}
+      </mat-list-item>
+    </mat-list> -->
+
+    <mat-list *ngFor="let a of addrSelected">
+      <p mat-subheader>{{a.name}}</p>
+      <mat-list-item>
+        <div>
+          <p mat-line> Phone : {{a.phone}}</p>
+          <p mat-line> Address : {{a.address}}</p>
+          <p mat-line> Email : {{a.email}}</p>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+
+    
+  </mat-tab>
+
+</mat-tab-group>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="left center">
+          <img src="https://www.shareicon.net/data/512x512/2016/11/21/854794_r2d2_512x512.png"
+            class="logo">
+          Star Wars
+        </div>
+        <button type="button" mat-icon-button color="accent"(click)="navigateToAddPage()">
+          <mat-icon>add_circle</mat-icon>
+        </button>
+</mat-toolbar>
+
+<!-- <app-people-list></app-people-list> -->
+
+<div>
+    <router-outlet></router-outlet>
+</div>

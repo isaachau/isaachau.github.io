@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  Star War Service
+</mat-toolbar>
+
+
+<form #form="ngForm" (ngSubmit)="search(form)" fxLayout="column row" fxLayoutGap="10px">
+  <div fxLayout="row column" fxLayoutAlign="left center" fxLayoutGap="20px">
+    <h4>People Id</h4>
+    <mat-form-field>
+      <input type="number" name="id"  placeholder="Please enter the Id" ngModel required min=1 matInput>
+    </mat-form-field>
+
+    <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">
+      Search
+    </button>
+  </div>
+</form>

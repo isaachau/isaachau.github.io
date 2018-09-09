@@ -1,0 +1,21 @@
+
+
+<!-- <mat-list>
+    <mat-list-item> Pepper </mat-list-item>
+    <mat-list-item> Salt </mat-list-item>
+    <mat-list-item> Paprika </mat-list-item>
+   </mat-list> -->
+
+<!-- <mat-nav-list>
+    <mat-list-item *ngFor="let p of people">
+       <a matLine href="...">{{ p }}</a>
+    </mat-list-item>
+</mat-nav-list> -->
+
+<mat-nav-list>
+  <h2 mat-sub-header>Characters</h2>
+  <a *ngFor="let p of people" 
+  [routerLink]="['/detail',p.id]" mat-list-item>
+    {{p.name}} ({{p.id}})
+  </a>
+</mat-nav-list>

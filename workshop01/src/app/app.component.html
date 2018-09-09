@@ -1,0 +1,15 @@
+<h1>My Shopping Cart</h1>
+
+<app-inventory (newLineItem)="processLineItem($event)"></app-inventory>
+<br>
+<p *ngIf="cart.length==0">Your cart is empty</p>
+<table>    
+    <tr *ngFor="let c of cart; let i = index">
+        <td>
+            {{c.label}} ({{c.quantity}})
+        </td>
+        <td>
+            <button type="button" (click)="deleteFruit(i)">Delete</button>
+        </td>
+    </tr>
+</table>

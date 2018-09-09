@@ -1,0 +1,32 @@
+<h2>Add Star Wars Characters</h2>
+
+<form #form="ngForm" (ngSubmit)="search(form)" fxLayout="column">
+
+  <mat-form-field>
+    People ID:
+    <input type="number" name="peopleId" min="1" required ngModel matInput>
+    <mat-hint>Star wars people id (1-88)</mat-hint>
+  </mat-form-field>
+
+  <br><br>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+
+    <!-- <button type="button" (click)="navigateBack()" mat-raised-button>
+      Back
+    </button> -->
+
+    <a [routerLink] = "['/']">Back</a>
+
+    <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+      <button type="reset" mat-raised-button>
+        Clear
+      </button>
+      <button type="submit" [disabled]="form.invalid" color="accent" mat-raised-button>
+        Add
+      </button>
+    </div>
+
+  </div>
+
+</form>
